@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaflet Map</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+
+  <style>
+    #map {
+      height: 500px; /* Adjust height as needed */
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+  
+  <script>
+    // Initialize the map and set its view
+    const map = L.map('map').setView([11.453, 77.704], 20); // Set to coordinates and zoom level
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles © Esri'
+}).addTo(map);
+
+const customIcon = L.icon({
+      iconUrl: 'marker.png', // URL to the custom icon
+      iconSize: [25, 25], // Size of the icon
+      iconAnchor: [12, 41], // Point of the icon which will correspond to marker's location
+      popupAnchor: [1, -34] // Point from which the popup should open relative to the iconAnchor
+    });
+
+    // Add a marker
+    const marker = L.marker([11.453, 77.704],{icon : customIcon}).addTo(map);
+    marker.bindPopup("Hi, I am in Komarapalayam").openPopup();
+  </script>
+</body>
+</html>
