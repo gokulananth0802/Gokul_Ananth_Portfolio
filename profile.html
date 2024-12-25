@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display:flex;
+        justify-content: center;
+    }
+    .slide-con{
+        display:flex;
+        width:500px;
+        height:500px;
+        position:relative;
+        background-size:cover;
+        background-repeat:no-repeat;
+    }
+    .slide-con .left{
+        position:absolute;
+        top:50%;
+        width:30px;
+        height:30px;
+        border-radius: 100%;
+        border:2px solid rgb(195, 194, 194);
+        transform:translateY(calc(-50%));
+    }
+    .slide-con .right{
+        position:absolute;
+        top:50%;
+        right:0;
+        width:30px;
+        height:30px;
+        border-radius: 100%;
+        border:2px solid rgb(195, 194, 194);
+        transform:translateX(calc(-50%));
+    }
+    .cer-img-con{
+        display:flex;
+        position:absolute;
+        top:30%;
+        left:30%;
+        transform:translateY(calc(-20%));
+    }
+    img{
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:200px;
+        height:200px; 
+
+    }
+</style>
+<body>
+    <div class="slide-con">
+        <div class="cer-img-con">
+            <img src="certificates/NEURA AI INTERNSHIP.jpg">
+            <img src="certificates/Desing thinking for Innovation_coursera.jpg">
+            <img src="certificates/WebDevelopment_coursera.jpg">
+            <img src="certificates/Eduskills_AI_ML.jpg">
+            <img src="certificates/HTML_SOLOLEARN.jpg">
+            <img src="certificates/CSS_SOLOLEARN.jpg">
+            <img src="certificates/NPTEL_Cloud_Computing.jpg">
+            <img src="certificates/NPTEL_IIOT 4.0.jpg">
+            <img src="certificates/NPTEL_Internet of Things.jpg">
+            <img src="certificates/JS_SOLOLEARN.jpg">
+            <img src="certificates/JS_Inter_SOLOLEARN.jpg">
+            <img src="certificates/JAVA_SOLOLEARN.jpg">
+            <img src="certificates/UI_UX_GreatLearning.jpg">
+            <img src="certificates/CSS_GreatLearning.jpg">
+            <img src="certificates/TypeScript_GreatLearning.jpg">
+            <img src="certificates/MongoDB_GreatLearning.jpg">
+            <img src="certificates/React JS_GreatLearning.jpg">
+        </div>
+        <button class="left"><</button>
+        <button class="right">></button>
+    </div>
+</body>
+<script>
+    var cerImg = document.querySelector(".cer-img-con");
+ var cerImgs = document.querySelectorAll(".cer-img-con img")
+ var leftBtn = document.querySelector(".slide-con .left");
+ var rightBtn = document.querySelector(".slide-con .right");
+ var pageNo = document.querySelector(".page_no");
+
+ var images = ["nature1","nature2","nature3","nature4","nature5","nature6"];
+ 
+ var active = Math.floor(cerImgs.length/2);
+ pageNo.textContent = active+1;
+ function loadSlides(){
+ var s = 0;
+ cerImgs[active].style.transform = `none`;
+ cerImgs[active].style.zIndex = 1;
+ cerImgs[active].style.filter = `none`;
+ cerImgs[active].style.opacity = 1;
+ 
+ for(let i=active+1;i<cerImgs.length;i++){
+     s++;
+     cerImgs[i].style.transform = `translateX(${-140*s}px) scale(${1 - 0.3*s}) perspective(16px) rotateY(1deg)`;
+     cerImgs[i].style.zIndex = -s;
+     cerImgs[i].style.filter = `blur(3px)`;
+     cerImgs[i].style.opacity = s > 2 ? 0:0.6;
+     cerImgs[i].style.transition = `1s`;
+ }
+ s = 0;
+ for(let i=active-1;i>=0;i--){
+     s++;
+     cerImgs[i].style.transform = `translateX(${140*s}px) scale(${1 - 0.3*s}) perspective(16px) rotateY(-1deg)`;
+     cerImgs[i].style.zIndex = -s;
+     cerImgs[i].style.filter = `blur(3px)`;
+     cerImgs[i].style.opacity = s > 2 ? 0:0.6;
+     cerImgs[i].style.transition = `1s`;
+ }
+ 
+}
+loadSlides();
+leftBtn.addEventListener("click",()=>{
+ active = active+1<cerImgs.length ? active+1 : active;
+ pageNo.textContent = cerImgs.length-active;
+ loadSlides();
+});
+rightBtn.addEventListener("click",()=>{
+ active = active-1>=0 ? active-1 : active;
+ pageNo.textContent = cerImgs.length-active;
+ loadSlides();
+});
+
+    
+</script>
+</html>
+
+<!-- let i=0;
+    leftBtn.addEventListener("click", ()=>{
+        i--;
+        if(i<0){    i=images.length-1;    }
+        certificate.style.background = `url("certificates/${images[i]}.jpg")`;
+    });
+    rightBtn.addEventListener("click", ()=>{
+        i++;
+        if(i==images.length){    i=0;    }
+        certificate.style.background = `url("certificates/${images[i]}.jpg")`;
+    }); -->

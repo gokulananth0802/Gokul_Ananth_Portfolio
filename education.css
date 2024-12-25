@@ -1,0 +1,152 @@
+.education,.skill{
+    position:absolute;
+    top:130%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding-left:120px;
+    transition: 1s;
+    color:black;
+}
+.education i,.skill i{
+    font-size:1.1em;
+    position:relative;
+    top:2px;
+}
+.sslc,.hsc,.degree{
+    text-align: left;
+    line-height: 20px;
+    position:relative;
+    width:250px;
+    height:60px;
+    background:linear-gradient(-35deg,rgb(10, 169, 169),rgb(39, 232, 232),aqua);
+    border-radius:40px 40px 0px 0px;
+    margin-right:30px;
+    margin-bottom:50px;
+    padding:40px;
+    z-index:5;
+    box-shadow: 0px 0px 10px 5px rgb(148, 148, 148);
+}
+.sslc_img,.hsc_img,.degree_img{
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    top:50%;
+    width:330px;
+    height:160px;
+    border-radius:0px 0px 40px 40px;
+    box-shadow: 0px 0px 10px 5px rgb(148, 148, 148);
+}
+.qua-con{
+    opacity:0;
+    transform:rotate(45deg) scale(1.4);
+    transition:transform 0.5s ease-in-out;
+}
+
+/* scroll design */
+
+.qua-con_show{
+    opacity:1;
+    transform: rotate(0deg);
+    transform-origin: top;
+    transition:transform 1s ease-in-out;
+}
+
+/* -------- */
+.qua-con .sslc_img{
+    background-image: url("jkkn_building.jpg");
+}
+.qua-con .hsc_img{
+    background-image: url("jkkn_building.jpg");
+}
+.qua-con .degree_img{
+    background-image: url("ksr_building.jpg");
+}
+.sslc-dow,.hsc-dow,.degree-dow{
+    justify-content: space-between;
+    align-content: center;
+    color:white;
+    text-shadow: 1px 1px 2px black;
+    position:relative;
+    top:-180px;
+    padding:20px;
+    width:290px;
+    height: 90px;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.354);
+    border-radius:20px 20px 40px 40px;
+    transition:0.5s;
+    backdrop-filter: blur(5px);
+}
+.qua-con:hover .sslc-dow,.qua-con:hover .hsc-dow,.qua-con:hover .degree-dow{
+    border-radius:0px 0px 40px 40px;
+    transform:translate(0px,120px)
+}
+.education{
+    position:relative;
+    left:-30px;
+    top:120px;
+}
+.education button{
+    position:relative;
+    top:10px;
+    margin-left:-5px;
+    width:100px;
+    height:30px;
+    padding:10px 35px;
+    z-index:0;
+}
+.qua-con{
+    text-align:center;
+}
+.qua-con h3{
+    color:rgb(255, 208, 0);
+    position:relative;
+    left:-10px;
+    bottom:50px;
+    font-size:40px;
+    text-shadow:2px 2px 1px rgb(36, 36, 36),
+                -1px -1px 1px rgb(160, 160, 160),
+                1px -1px 1px rgb(160, 160, 160),
+                -1px 1px 1px rgb(160, 160, 160),
+                1px 2px 1px rgb(234, 255, 0),
+                1px 3px 1px rgb(234, 255, 0),
+                1px 4px 1px rgb(234, 255, 0),
+                0px 2px 20px rgb(234, 255, 0),
+                0px 4px 40px rgb(234, 255, 0),
+                0px 6px 70px rgb(234, 255, 0);
+}
+.qua-con h3::before{
+    content:' ';
+    position:absolute;
+    top:46px;
+    left:49%;
+    z-index: -4;
+    width:5px;
+    height:100px;
+    background-color: rgb(148, 148, 148);
+}
+.qua-con h3::after{
+    content:' ';
+    position:absolute;
+    top:-2px;
+    left:49%;
+    z-index: -4;
+    width:5px;
+    height:100px;
+    border-radius:10px 0px 0px 10px;
+    background-color: rgb(148, 148, 148);
+    transform:rotate(-90deg);
+}
+.qua-con h5 i{
+    font-size:18px;
+    padding-right:5px;
+}
+.qua-con i{
+    font-size:18px;
+    padding-right:8px;
+    padding-left:0.5px;
+}
+.qua-con .ins_name{
+    display:flex;
+}

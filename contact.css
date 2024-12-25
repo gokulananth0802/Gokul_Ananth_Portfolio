@@ -8,13 +8,9 @@
     background-position: center;
     filter:blur(1px);
 }
-
-
 #contact{
     width:100%;
     height:100vh;
-    position:absolute;
-    top:350%;
 }
 .contact{
     display:flex;
@@ -48,3 +44,30 @@ h3 .contact_hover{
     width:150px;
     background-color:blueviolet;
 }
+.loc_add p,.phone p,.email p{
+    padding:10px 5px;
+    background:rgba(255, 255, 255, 0.112);
+    border:2px solid rgba(255, 255, 255, 0.279);
+    border-radius:10px;
+}
+.loc_add h3,.phone h3,.email h3{
+text-shadow:1px 1px 3px rgb(0, 255, 251);
+color:rgb(90, 9, 152);
+padding:3px 20px;
+border-radius:10px;
+text-align:right;
+background:linear-gradient(45deg,rgb(6, 104, 104),rgb(16, 215, 215),aqua);
+margin-bottom:5px;
+transition:1s;
+}
+.loc_add h3:hover,.phone h3:hover,.email h3:hover{
+    background:linear-gradient(45deg,aqua,rgb(16, 215, 215),rgb(6, 104, 104));
+    text-align:left;
+    transition:1s;
+}
+#map{
+    width:45%;
+    height:380px;
+    border:2px solid grey;
+    border-radius:20px;
+ }

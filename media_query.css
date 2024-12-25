@@ -1,0 +1,171 @@
+@media all and (max-width:600px){
+    *{
+        max-width:432px;
+        margin:0px;
+        font-family: 'poppins',sans-serif;
+    }
+    .toggle-switch{
+        left:55%;
+        transform:scale(0.8);
+    }
+    #education{
+        position:relative;
+    }
+    #skill{
+        margin-top:250px;
+    }
+    .education,.skill{
+        display:flex;
+        flex-direction: column;
+    }
+    .sslc,.hsc,.degree{
+        width:400px;
+        height:96px;
+        font-size:1.4rem;
+        line-height:30px;
+    }
+    .sslc_img,.hsc_img,.degree_img{
+        top:250px;
+        left:75px;
+        transform: scale(1.44);
+    }
+    .qua-con:nth-child(2),.qua-con:nth-child(3){
+        margin-top:150px;
+    }
+    .qua-con h3{
+        left:5%;
+    }
+    .skills{
+        display:grid;
+        grid-template-columns:400px;
+        grid-gap:40px;
+        margin-left:5%;
+    }
+    #certifications{
+        
+        width:100%;
+        overflow:visible;
+    }
+    .slide-con{
+        left:15%;
+        transform:scale(0.6);
+    }
+    .slide-con .left{
+        width:50px;
+        height:50px;
+        font-size:1.2rem;
+        right:0;
+        transform:translateX(500%) translateY(560%);
+    }
+    .slide-con .right{
+        transform:translateX(400%) translateY(560%);
+        width:50px;
+        height:50px;
+        font-size:1.2rem;
+    }
+    .slide-con .page_no{
+        left:115%;
+    }
+    img{
+        min-width:550px;
+    }
+    #education h1,#skill h1,#certifications h1,#contact h1{
+        transform:translateX(-30px) scale(0.7);
+        position:absolute;  
+    }
+    #contact{
+        min-height:110vh;
+    }
+    .contact{
+        flex-direction: column;
+        min-width:105%;
+        min-height:95vh;
+        margin-bottom: 100px;
+    }
+    .con_info{
+        margin-top:20px;
+        min-width:90%;
+    }
+    #map{
+        min-width:90%;
+        padding:30px 0px;
+        margin-left:25px;
+        margin-bottom:20px
+    }
+    #home{
+        min-width:125%;
+        position:relative;
+        margin-top:100px;
+        margin-bottom:450px;
+        overflow:visible;
+    }
+    .footer{
+        margin-bottom:0px;
+        margin-top:100px;
+        min-width:100%;
+    }
+    .welcome{
+        text-align:center;
+        position:absolute;
+        left:10%;
+        top:80%;
+        min-width:100%;
+    }
+    .profile{
+        position:absolute;
+        left:-22%;
+        transform:scale(0.8);
+        min-width:150%;
+    }
+    .color-wheel{
+        min-width:72%;
+    }
+    .profile .profile_img{
+        min-width:95%;
+    }
+    .open{
+        width: 350px;
+        height:570px;
+        border-radius:20px;
+        transition:0.5s;
+    }
+    .menubar{
+         overflow:hidden;
+         position:fixed;
+         z-index:25;
+    }
+    .menu{
+        position:absolute;
+        top:180px;
+        left:90px;
+    }
+    .scroll{
+        position:absolute;
+        top:10px;
+        left:10px;
+        z-index:30;
+    }
+    nav h1{
+        margin-left:5px;
+        margin-bottom: 70px;
+    }
+    ul{
+        display:block;
+        position:absolute;
+        left:-40px;
+        text-align: center;
+    }
+    li{
+        margin-bottom:20px;
+        animation:slidein ease-in 3s;
+    }
+    .scrollup{
+       position:absolute;
+       transform:rotate(90deg);
+     }
+     .returnToTop{
+        position:fixed;
+        left:450px;
+        bottom:40px;
+    }
+}
